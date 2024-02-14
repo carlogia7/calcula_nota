@@ -1,0 +1,58 @@
+header {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+header>h1 {
+    font-size: 50px;
+    font-family: "Anta", sans-serif;
+    letter-spacing: 1px;
+}
+
+/* CALCULADORA EM SI */
+
+main {
+    background-color: white;
+    width: 60%;
+    border-radius: 20px;
+}
+
+main button {
+    background-color: white;
+    /* background-color: #E2DED3; */
+    text-decoration: none;
+    border-radius: 10px;
+    border: #E2DED3 3px solid;
+    border-color: #E2DED3;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 500ms ease-in-out;
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: #E2DED3;
+    z-index: -1;
+    -webkit-transition: width 500ms ease-in-out;
+    transition: width 500ms ease-in-out;
+}
+
+button:hover:after {
+    width: 110%;
+}
+
+div.product-grid {
+    font-family: "Anta";
+    font-size: 20px;
+}
