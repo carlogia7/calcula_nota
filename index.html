@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Raleway&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body style="background-color: gainsboro;">
@@ -22,21 +23,46 @@
         <main>
             <div class="product-grid row text-center">
                 <div class="col-md-6 py-3">
-                    <button title="Cálculo sem PI e Psub, média 50/50">Modo simples</button>
+                    <button title="Cálculo sem PI e Psub" class="simp modo-btn">Modo simples</button>
                 </div>
                 <div class="col-md-6 py-3">
-                    <button title="Cálculo sem PI, mas com Psub, média 50/50">Modo com Psub</button>
+                    <button title="Cálculo sem PI, mas com Psub" class="psub modo-btn">Modo com Psub</button>
                 </div>
                 <div class="col-md-6 py-3">
-                    <button title="Cálculo com PI e sem Psub, média 50/50">Modo com PI</button>
+                    <button title="Cálculo com PI e sem Psub" class="t3 modo-btn">Modo com PI</button>
                 </div>
                 <div class="col-md-6 py-3">
-                    <button title="Cálculo com PI e Psub, média 50/50">Modo composto</button>
+                    <button title="Cálculo com PI e Psub" class="comp modo-btn">Modo composto</button>
+                </div>
+            </div>
+            <div class="product-grid row text-center">
+                <div class="col-md-3">
+                    P1:
+                    <input type="text" maxlength="4" id="inputs" class="padroes" required>
+                </div>
+                <div class="col-md-3">
+                    P2:
+                    <input type="text" maxlength="4" id="inputs" class="padroes" required>
+                </div>
+                <div class="col-md-3">
+                    T1:
+                    <input type="text" maxlength="4" id="inputs" class="padroes" required>
+                </div>
+                <div class="col-md-3">
+                    T2:
+                    <input type="text" maxlength="4" id="inputs" class="padroes" required>
+                </div>
+                <div class="outros col-md-6" id="psub">
+                    Psub:
+                    <input type="text" maxlength="4" id="inputs" class="psub">
+                </div>
+                <div class="outros col-md-6" id="t3">
+                    T3/PI:
+                    <input type="text" maxlength="4" id="inputs" class="t3">
                 </div>
             </div>
         </main>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>

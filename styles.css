@@ -29,7 +29,7 @@ main button {
     overflow: hidden;
     z-index: 1;
     -webkit-transition: color 150ms ease-in-out;
-    transition: color 500ms ease-in-out;
+    transition: color 350ms ease-in-out;
 }
 
 button:after {
@@ -44,15 +44,25 @@ button:after {
     height: 100%;
     background: #E2DED3;
     z-index: -1;
-    -webkit-transition: width 500ms ease-in-out;
-    transition: width 500ms ease-in-out;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
 }
 
 button:hover:after {
     width: 110%;
 }
 
+.modo-btn.clicked:after {
+    width: 110%;
+}
+
 div.product-grid {
     font-family: "Anta";
     font-size: 20px;
+}
+
+main #inputs {
+    margin-top: 10px;
+    width: 55px;
+    height: 30px;
 }
