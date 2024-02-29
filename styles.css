@@ -77,7 +77,7 @@ button.calc {
     width: 250px;
     height: 50px;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 40px;
     border: 3px solid #E2DED3;
     color: black;
     font-size: 20px;
@@ -86,6 +86,7 @@ button.calc {
     background: transparent;
     transition: all .35s;
     overflow: hidden;
+    margin: 20px 10px;
 }
 
 button.calc:before,
@@ -97,7 +98,7 @@ button.calc:after {
     top: -100%;
     left: 0;
     background: #E2DED3;
-    /* z-index: -1; */
+    z-index: 0;
     transition: all .35s;
 }
 
@@ -106,14 +107,24 @@ button.calc:before {
 }
 
 button.calc:after {
-    transition-delay: .2s;
+    transition-delay: .3s;
 }
 
 button.calc:hover {
-    color: #E2DED3;
+    color: rgb(49, 49, 49);
 }
 
 button.calc:hover:before,
 button.calc:hover:after {
-    top: 100%;
+    top: 0;
+}
+
+button.calc span {
+    position: relative;
+    z-index: 1;
+    transition: opacity .35s;
+}
+
+button.calc:hover span {
+    opacity: 1;
 }
