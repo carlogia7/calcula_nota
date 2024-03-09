@@ -22,14 +22,18 @@ botaoModoSimp.addEventListener('click', function () {
     outros.forEach(function (elemento) {
         elemento.style.display = 'none'
     })
+    document.querySelector('.psub').value = ''
+    document.querySelector('.t3').value = ''
 })
 botaoModoPsub.addEventListener('click', function () {
     document.getElementById('t3').style.display = 'none'
     document.getElementById('psub').style.display = 'block'
+    document.querySelector('.t3').value = ''
 })
 botaoModoT3.addEventListener('click', function () {
     document.getElementById('psub').style.display = 'none'
     document.getElementById('t3').style.display = 'block'
+    document.querySelector('.psub').value = ''
 })
 botaoModoComp.addEventListener('click', function () {
     document.getElementById('psub').style.display = 'block'
@@ -80,17 +84,23 @@ const enviarNotas = () => {
     }
 
     const mediaFinal = () => {
-        console.log(pesos.value)
-        if (document.querySelector('.checked')) {
-            if (pesos.value == 50) {
-                console.log("peso 50")
-            } else if (pesos.value == 60) {
-                console.log("peso 60")
+        const inputMarcado = document.querySelector('input:checked')
+        if (inputMarcado) {
+            if (inputMarcado.id == 'peso_50') {
+                return (mediaProva() + mediaTrabalho()) / 2
+            } else if (inputMarcado.id == 'peso_60') {
+                return (0.6 * mediaProva()) + (0.4 * mediaTrabalho())
             } else {
-                console.log("peso 70")
+                return (0.7 * mediaProva()) + (0.3 * mediaTrabalho())
             }
 
         }
     }
-    console.log(`${p1} + ${p2} + ${t1} + ${t2} + ${psub} + ${t3} = ${mediaProva()} + ${mediaTrabalho()} == final: ${mediaFinal()}`)
+
+
+
+
+    
+    // Teste para valores, se quiser ative para visualizar
+    // console.log(`Prova 1: ${p1}\nProva 2: ${p2}\nTrabalho 1: ${t1}\nTrabalho 2: ${t2}\nProva Sub: ${psub}\nTrabalho 3/ PI: ${t3}\nMédia Prova: ${mediaProva()}\nMédia Trabalho: ${mediaTrabalho()}\nMédia Final: ${mediaFinal()}`)
 }
