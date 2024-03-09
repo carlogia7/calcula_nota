@@ -26,10 +26,10 @@
                     <button title="Cálculo sem PI e Psub" class="simp modo-btn">Modo simples</button>
                 </div>
                 <div class="col-md-6 py-3">
-                    <button title="Cálculo sem PI, mas com Psub" class="psub modo-btn">Modo com Psub</button>
+                    <button title="Cálculo sem PI, mas com Psub" class="psubModo modo-btn">Modo com Psub</button>
                 </div>
                 <div class="col-md-6 py-3">
-                    <button title="Cálculo com PI e sem Psub" class="t3 modo-btn">Modo com PI</button>
+                    <button title="Cálculo com PI e sem Psub" class="t3Modo modo-btn">Modo com PI</button>
                 </div>
                 <div class="col-md-6 py-3">
                     <button title="Cálculo com PI e Psub" class="comp modo-btn clicked">Modo composto</button>
@@ -38,19 +38,19 @@
             <div class="product-grid row text-center">
                 <div class="col-md-3 pb-2">
                     P1:
-                    <input type="text" maxlength="4" id="inputs" class="padroes" required>
+                    <input type="text" maxlength="4" id="inputs" class="p1 padroes" required>
                 </div>
                 <div class="col-md-3 pb-2">
                     P2:
-                    <input type="text" maxlength="4" id="inputs" class="padroes" required>
+                    <input type="text" maxlength="4" id="inputs" class="p2 padroes" required>
                 </div>
                 <div class="col-md-3 pb-2" style="letter-spacing: 1px;">
                     T1:
-                    <input type="text" maxlength="4" id="inputs" class="padroes" required>
+                    <input type="text" maxlength="4" id="inputs" class="t1 padroes" required>
                 </div>
                 <div class="col-md-3 pb-2">
                     T2:
-                    <input type="text" maxlength="4" id="inputs" class="padroes" required>
+                    <input type="text" maxlength="4" id="inputs" class="t2 padroes" required>
                 </div>
                 <div class="outros col-md-6" id="psub">
                     Psub:
@@ -75,7 +75,7 @@
                     <label for="peso_70">70/30</label>
                 </div>
                 <div class="container">
-                    <button class="calc"><span>Calcular</span></button>
+                    <button onclick="enviarNotas()" class="calc"><span>Calcular</span></button>
                 </div>                
             </div>
         </main>
