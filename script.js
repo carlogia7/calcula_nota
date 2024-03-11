@@ -1,5 +1,4 @@
 // Define classe para modo selecionado (estilo css)
-
 const modosCor = document.querySelectorAll('.modo-btn')
 modosCor.forEach(button => {
     // Evento para detectar o click no botão
@@ -41,7 +40,6 @@ botaoModoComp.addEventListener('click', function () {
 })
 
 // Define classe para peso selecionado
-
 const pesos = document.querySelectorAll('input[name="peso"]')
 pesos.forEach(input => {
     input.addEventListener('click', () => {
@@ -58,12 +56,12 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 // Operações
 const enviarNotas = () => {
 
-    const p1 = parseFloat(document.querySelector('.p1').value);
-    const p2 = parseFloat(document.querySelector('.p2').value);
-    const t1 = parseFloat(document.querySelector('.t1').value);
-    const t2 = parseFloat(document.querySelector('.t2').value);
-    const psub = parseFloat(document.querySelector('.psub').value);
-    const t3 = parseFloat(document.querySelector('.t3').value);
+    const p1 = parseFloat(document.querySelector('.p1').value)
+    const p2 = parseFloat(document.querySelector('.p2').value)
+    const t1 = parseFloat(document.querySelector('.t1').value)
+    const t2 = parseFloat(document.querySelector('.t2').value)
+    const psub = parseFloat(document.querySelector('.psub').value)
+    const t3 = parseFloat(document.querySelector('.t3').value)
 
     const mediaProva = () => {
         if (!isNaN(psub)) {
@@ -131,9 +129,7 @@ const enviarNotas = () => {
         html: true,
         container: 'body'
     })
-
-    document.addEventListener('click', esconderPopover);
-
+    document.addEventListener('click', esconderPopover)
 
     // Teste para valores, se quiser ative para visualizar
     // console.log(`Prova 1: ${p1}\nProva 2: ${p2}\nTrabalho 1: ${t1}\nTrabalho 2: ${t2}\nProva Sub: ${psub}\nTrabalho 3/ PI: ${t3}\nMédia Prova: ${mediaProva()}\nMédia Trabalho: ${mediaTrabalho()}\nMédia Final: ${mediaFinal()}`)
