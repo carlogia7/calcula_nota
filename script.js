@@ -50,6 +50,10 @@ pesos.forEach(input => {
     })
 })
 
+// Popovers funcionam
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
 
 // Operações
 const enviarNotas = () => {
@@ -97,10 +101,40 @@ const enviarNotas = () => {
         }
     }
 
+    const esconderPopover = (evento) => {
+        if (!document.querySelector('.calc').contains(evento.target) && evento.target !== document.querySelector('.calc')) {
+            popover.dispose()
+            document.removeEventListener('click', esconderPopover)
+            
+        } else {
+            popover.show()
+        }
+    }
+
+    let content = ''
+    let title = ''
+
+    if (mediaFinal() >= 6) {
+        document.get
+        title = 'Parabéns!'
+        content = `Você passou com média: ${mediaFinal().toFixed(2)}`
+    } else if (mediaFinal() < 6) {
+        title = 'Putz...'
+        content = `Você reprovou com média: ${mediaFinal().toFixed(2)}`
+    } else {
+        title = '...'
+        content = `Esperando os valores...`
+    }
+    const popover = new bootstrap.Popover(document.querySelector(".calc"), {
+        title: title,
+        content: content,
+        html: true,
+        container: 'body'
+    })
+
+    document.addEventListener('click', esconderPopover);
 
 
-
-    
     // Teste para valores, se quiser ative para visualizar
     // console.log(`Prova 1: ${p1}\nProva 2: ${p2}\nTrabalho 1: ${t1}\nTrabalho 2: ${t2}\nProva Sub: ${psub}\nTrabalho 3/ PI: ${t3}\nMédia Prova: ${mediaProva()}\nMédia Trabalho: ${mediaTrabalho()}\nMédia Final: ${mediaFinal()}`)
 }
